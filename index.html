@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Graphiste Publicitaire & Webdesigner</title>
+    <style>
+        /* Réinitialisation de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb; /* Bleu moderne */
+            --dark-color: #1e293b;    /* Gris très foncé */
+            --light-bg: #f8fafc;      /* Fond de page */
+            --card-bg: #ffffff;      /* Fond des blocs */
+            --text-muted: #64748b;   /* Texte secondaire */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* En-tête / Hero */
+        .hero {
+            background: linear-gradient(135deg, #0f172a, var(--dark-color));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #93c5fd;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .hero .tagline {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #cbd5e1;
+        }
+
+        /* Boutons */
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-alt {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-alt:hover {
+            background-color: white;
+            color: var(--dark-color);
+        }
+
+        /* Contenu Principal */
+        .main-content {
+            margin-top: -40px; /* Chevauchement design sur le hero */
+        }
+
+        .aboutCard, .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Effet de survol créatif pour un graphiste */
+        .aboutCard:hover, .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mise en page en grille */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Éléments de liste (Expériences/Formations) */
+        h3 {
+            font-size: 1.3rem;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item h4 {
+            font-size: 1.1rem;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        /* Liste de compétences et Badges */
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .badge {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Version Mobile (Responsive) */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête / Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Tessier Frédéric</h1>
+            <h2>Graphiste Publicitaire</h2>
+            <p class="tagline">Création d'identités visuelles percutantes et de campagnes publicitaires mémorables.</p>
+            <div class="links">
+                <a href="mailto:fred191073@gmail.com" class="btn">Me contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        
+        <!-- Section À Propos -->
+        <section class="aboutCard">
+            <h3>À propos de moi</h3>
+            <p>Graphiste publicitaire polyvalent et créatif, je traduis l'identité des marques sur tous les supports physiques et digitaux. De la création de logos percutants à la conception de visuels de campagnes publicitaires, je maîtrise l'ensemble de la chaîne graphique. Spécialisé dans le grand format et le print, je réalise le design d'habillages de véhicules (covering) et d'enseignes, en garantissant une parfaite adaptation technique et un impact visuel maximal auprès du public.</p>
+        </section>
+
+        <!-- Grille Principale (2 colonnes) -->
+        <div class="grid-2">
+            
+            <!-- Colonne Gauche : Expériences & Formations -->
+            <div class="col-left">
+                <section class="card">
+                    <h3>Expériences Professionnelles</h3>
+
+  			<div class="item">
+                        <h4>Graphiste</h4>
+                        <p class="meta">À partir du 2 mai au 26 juillet 2024</p>
+                        <p>Société CROQ’PAPIER à FONTCOUVERTE
+Chargé assurer la création et piloter le lancement de l’impression.</p>
+
+                    
+                    <div class="item">
+                        <h4>Graphiste et responsable communication</h4>
+                        <p class="meta">Journal Les potins d'abord De août 2020 à décembre 2022</p>
+                        <p>conception et mise en page du journal quotidien (encart pub, articles) relation
+clients</p>
+                   
+
+                    <div class="item">
+                        <h4>Gérant</h4>
+                        <p class="meta">De janvier 2019 à février 2022 société T3S à saintes</p>
+                        <p>agence en publicité</p>
+                    </div>
+               
+		
+		      <div class="item">
+                        <h4>Graphiste , poseur</h4>
+                        <p class="meta">De novembre 2012 à août 2017 VEDIAUD PUBLICITE saintes</p>
+                        <p>. Opérateur PAO : création graphique en utilisant charte graphique client
+(Leclerc, Martel, etc…).. Mise en situation mobilier urbain pour appel offre (ville
+st benoit, château Olonne, etc…)
+. Pose Adhésifs sur panneau de route et véhicule (pose adhésif).
+. Contact client et mairie (création et validation maquette).
+. Préparation Affichage commerciale et mairie (ville de Saintes, Cognac,
+Angoulême).
+. Gestion et réception affiches pour affichage commerciale mobilier urbain.
+. Gestion planning et personnel affichage pour les différentes villes.
+. Fabrication affiche 2 et 8 m²</p>
+
+			<div class="item">
+                        <h4>Graphiste</h4>
+                        <p class="meta">De 1998 à 2005 société Parrot Communication à Royan.</p>
+                        <p>- Agence communication événementielle.</p>
+
+                    </div>
+
+                </section>
+
+                <section class="card">
+                    <h3>Diplômes et Formations</h3>
+                    <div class="item">
+                        <h4>Bac Professionnel DPI</h4>
+                        <p class="meta">De septembre 1992 à juin 1993 LEGTP notre dame Bordeaux, France
+Bac pro étude et définition de produits industriels</p>
+			<div class="item">
+                        <h4>BEP et CAP microtechniques</h4>
+                        <p class="meta">De septembre 1990 à juin 1992 Note dame Fontenay-le-Comte, France
+Tourneur, Fraiseur, Ajusteur</p>
+		
+		 	<h3>Formations complémentaires</h3>
+			<h4>Formation Web</h4>
+                        <p class="meta">De juin 2018 à juillet 2018 sif formations saintes
+Langage HTML, CSS, Javascript, PHP</p>
+
+
+                    </div>
+
+
+
+                </section>
+            </div>
+
+            <!-- Colonne Droite : Compétences & Outils -->
+            <div class="col-right">
+                <section class="card">
+                    <h3>Compétences</h3>
+                    <ul class="skills-list">
+                        <li>Identité Visuelle</li>
+                        <li>Publicité Print & Digitale</li>
+                        <li>Webdesign</li>
+                        <li>Motion Design de base</li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h3>Outils & Logiciels</h3>
+                    <div class="tools-grid">
+                        <span class="badge">Photoshop</span>
+                        <span class="badge">Illustrator</span>
+                        <span class="badge">InDesign</span>
+                        <span class="badge">Corel draw</span>
+                        <span class="badge">After Effects</span>
+                        <span class="badge">HTML5 / CSS3</span>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 Tessier Frédéric. Tous droits réservés. | Téléphone : 06 50 80 18 45 | Saintes, France</p>
+    </footer>
+
+</body>
+</html>
+
